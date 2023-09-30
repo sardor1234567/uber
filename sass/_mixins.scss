@@ -1,0 +1,49 @@
+@mixin btn-style {
+    height: 46px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #4BE1FE, #21B0CB);
+    box-shadow: 0px 2px 1px 1px #1B98B0;
+    font-weight: 500;
+    &:hover {
+        transition: 0.3s all;
+        background: #fff;
+        box-shadow: 0 2px 1px 1px gainsboro;
+        color: $main-color;
+    }
+    &:active {
+        box-shadow: none;
+        transform: translateY(2px);
+    }
+}
+
+@mixin label-style {
+    height: 27px;
+    width: 115px;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+@mixin title-style {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 30px;
+    @media (max-width: 991px) {
+        font-size: 27px;
+    }
+    @media (max-width: 576px) {
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

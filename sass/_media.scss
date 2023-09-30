@@ -1,0 +1,403 @@
+// 1200 992 768 576 320
+// 1200 - 992
+// 991 - 768
+// 767 - 576
+// 575 - 320
+
+@media (max-width: 1200px) {
+    .header {
+        .header_menu {
+            li {
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .promo {
+        .promo_items {
+            .promo_title {
+                font-size: 55px;
+            }
+        }
+    }
+    .subheader {
+        .subheader_items {
+            .subheader_call {
+                .call_descr {
+                    font-size: 10px;
+                }
+                .call_number {
+                    font-size: 17px;
+                }
+            }
+            .subheader_btn {
+                font-size: 13px;
+            }
+        }
+    }
+    .reasons {
+        .reasons_items {
+            .reasons_content {
+                .reasons_item {
+                    .item_text {
+                        .item_title {
+                            font-size: 14px;
+                        }
+                        .item_descr {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobile {
+        min-height: 1200px;
+        .mobile_items {
+            .mobile_content {
+                min-height: 900px;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    .footer {
+        min-height: 200px;
+        .footer_items {
+            min-height: 120px;
+            margin-top: 30px;
+            flex-direction: column;
+            .footer_socials {
+                position: static;
+                order: 1;
+                margin-top: 15px;
+            }
+            .footer_text {
+                order: 0;
+            }
+            .footer_links {
+                position: static;
+                order: 2;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .header {
+        .header_menu {
+            li {
+                a {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    .promo {
+        .promo_items {
+            .promo_title {
+                font-size: 41px;
+            }
+            .promo_subtitle {
+                font-size: 29px;
+            }
+        }
+    }
+    .reasons {
+        .reasons_items {
+            .reasons_content {
+                min-height: 1700px;
+                .reasons_item {
+                    flex-direction: column;
+                    .item_round {
+                        width: 116px;
+                        min-height: 116px;
+                        margin: 0;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .car {
+        .car_dark {
+            .dark_items {
+                .car_img {
+                    width: 700px;
+                }
+            }
+        }
+    }
+    .rules {
+        .rules_items {
+            .rules_blue {
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        .header_menu {
+            height: 100vh;
+            width: 50%;
+            position: fixed;
+            left: -200%;
+            background: rgba(0,0,0, .7);
+            flex-direction: column;
+            transition: 0.4s all;
+            li {
+                border: none;
+                margin: 5px 0;
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+        .header_menu_active {
+            transition: 0.4s all;
+            left: 0;
+        }
+        .header_hamburger {
+            cursor: pointer;
+            height: 35px;
+            width: 50px;
+            // border: 1px solid #fff;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 7px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.4s all;
+            .line {
+                width: 100%;
+                height: 2px;
+                display: block;
+                background-color: #fff;
+                transition: 0.4s all;
+            }
+        }
+        .header_hamburger_active {
+            transition: 0.4s all;
+            .line {
+                transition: 0.4s all;
+                &:first-child {
+                    transition: 0.4s all;
+                    transform: rotate(45deg) translate(10px, 3px);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:last-child {
+                    transition: 0.4s all;
+                    transform: rotate(-45deg) translate(10px, -3px);
+                }
+            }
+        }
+    }
+    .subheader {
+        .subheader_items {
+            justify-content: space-between;
+            .subheader_logo {
+                a {
+                    display: block;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .logo_descr {
+                    display: none;
+                }
+            } 
+            .subheader_call {
+                display: none;
+            }
+            .subheader_btn {
+                display: none;
+            }
+            .subheader_call_small {
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                .small_call {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 18px;
+                    &:hover {
+                        transition: 0.3s all;
+                        color: $main-color;
+                    }
+                }
+                .small_btn {
+                    @include btn-style;
+                    height: auto;
+                    width: auto;
+                    padding: 3px 10px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    .promo {
+        .promo_items {
+            .promo_title {
+                font-size: 30px;
+            }
+            .promo_subtitle {
+                font-size: 21px;
+            }
+        }
+    }
+    .mobile {
+        min-height: 2100px;
+        .mobile_items {
+            min-height: 2100px;
+            .mobile_content {
+                min-height: 1800px;
+            }
+        }
+    }
+    .car {
+        min-height: 502px;
+        .car_dark {
+            .dark_items {
+                .car_img {
+                    margin-top: 25px;
+                    width: 500px;
+                }
+            }
+        }
+        .car_light {
+            display: none;
+        }
+    }
+    .rules {
+        .rules_items {
+            .rules_red {
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .header {
+        .header_menu {
+            width: 72%;
+            padding-top: 35px;
+            justify-content: start;
+            li {
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .subheader {
+        .subheader_items {
+            .subheader_call_small {
+                .small_call {
+                    font-size: 12px;
+                }
+                .small_btn {
+                    width: 110px;
+                    height: 22px;
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    .promo {
+        min-height: 399px;
+        .promo_items {
+            min-height: 399px;
+            .promo_title {
+                font-size: 28px;
+            }
+            .promo_subtitle {
+                font-size: 20px;
+                margin-top: 35px;
+            }
+            .promo_content {
+                display: none;
+            }
+            .promo_btn {
+                height: 50px;
+                width: 210px;
+                margin-top: 25px;
+            }
+        }
+    }
+    .reasons {
+        min-height: 2650px;
+        .reasons_items {
+            min-height: 2650px;
+            .reasons_content {
+                min-height: 2300px;
+            }
+        }
+    }
+    .mobile {
+        .mobile_items {
+            .mobile_title_descr {
+                font-size: 15px;
+            }
+            .mobile_content {
+                .mobile_item {
+                    .item_title {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .car {
+        .car_dark {
+            .dark_items {
+                .car_img {
+                    width: 275px;
+                }
+            }
+        }
+    }
+    .rules {
+        .rules_items {
+            .rules_red {
+                    .item_list {
+                        padding-left: 0;
+                    }  
+            }
+            .rules_blue {
+                .item_list {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    .map {
+        .map_items {
+            .map_title {
+                font-size: 18px;
+            }
+        }
+    }
+    .footer {
+        .footer_items {
+            .footer_text {
+                width: 300px;
+                .text_top {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+                .text_down {
+                    a {
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
